@@ -19,7 +19,7 @@ import th from '../../public/locales/th/translation.json';
 import tw from '../../public/locales/tw/translation.json';
 import hk from '../../public/locales/hk/translation.json';
 import ph from '../../public/locales/ph/translation.json';
-import bn from '../../public/locales/bn/translation.json'; // ✅ Bangladesh (Bengali)
+import bd from '../../public/locales/bd/translation.json'; // ✅ Bangladesh (Bengali)
 
 i18n
   .use(LanguageDetector)
@@ -43,7 +43,7 @@ i18n
       tw: { translation: tw },
       hk: { translation: hk },
       ph: { translation: ph },
-      bn: { translation: bn }, // ✅
+      bd: { translation: bd }, // ✅
     },
     fallbackLng: 'en',
     supportedLngs: [
@@ -64,7 +64,7 @@ i18n
       'tw',
       'hk',
       'ph',
-      'bn', // ✅
+      'bd', // ✅
     ],
     detection: {
       order: ['localStorage', 'navigator'],
