@@ -19,60 +19,39 @@ import th from '../../public/locales/th/translation.json';
 import tw from '../../public/locales/tw/translation.json';
 import hk from '../../public/locales/hk/translation.json';
 import ph from '../../public/locales/ph/translation.json';
-import bn from '../../public/locales/bn/translation.json'; // ✅ Bangladesh (Bengali)
-
 i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    resources: {
-      be: { translation: be },
-      bz: { translation: bz },
-      ca: { translation: ca },
-      cz: { translation: cz },
-      de: { translation: de },
-      en: { translation: en },
-      fr: { translation: fr },
-      in: { translation: ind },
-      it: { translation: it },
-      pk: { translation: pk },
-      us: { translation: us },
-      vn: { translation: vn },
-      jp: { translation: jp },
-      th: { translation: th },
-      tw: { translation: tw },
-      hk: { translation: hk },
-      ph: { translation: ph },
-      bn: { translation: bn }, // ✅
-    },
-    fallbackLng: 'en',
-    supportedLngs: [
-      'be',
-      'bz',
-      'ca',
-      'cz',
-      'de',
-      'en',
-      'fr',
-      'in',
-      'it',
-      'pk',
-      'us',
-      'vn',
-      'jp',
-      'th',
-      'tw',
-      'hk',
-      'ph',
-      'bn', // ✅
-    ],
-    detection: {
-      order: ['localStorage', 'navigator'],
-      caches: ['localStorage'],
-    },
-    interpolation: {
-      escapeValue: false,
-    },
-  });
+    .use(LanguageDetector)
+    .use(initReactI18next)
+    .init({
+        resources: {
+            be: { translation: be },
+            bz: { translation: bz },
+            ca: { translation: ca },
+            cz: { translation: cz },
+            de: { translation: de },
+            en: { translation: en },
+            fr: { translation: fr },
+            in: { translation: ind },
+            it: { translation: it },
+            pk: { translation: pk },
+            us: { translation: us },
+            vn: { translation: vn },
+            jp: { translation: jp },
+            th: { translation: th },
+            tw: { translation: tw },
+            hk: { translation: hk },
+            ph: { translation: ph },
+        },
+        fallbackLng: 'en',
+        supportedLngs: ['be', 'bz', 'ca', 'cz', 'de', 'en', 'fr', 'in', 'it', 'pk', 'us', 'vn', 'jp', 'th', 'tw', 'hk', 'ph'],
+        // supportedLngs: ['en'],
+        detection: {
+            order: ['localStorage', 'navigator'],
+            caches: ['localStorage'],
+        },
+        interpolation: {
+            escapeValue: false,
+        },
+    });
 
 export default i18n;
